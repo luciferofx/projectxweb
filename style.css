@@ -548,3 +548,21 @@ footer p {
     }
 }
 
+/* Add this to your style.css */
+.exit-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #FF4C4C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.exit-btn:hover {
+    background-color: #FF0000;
+}
