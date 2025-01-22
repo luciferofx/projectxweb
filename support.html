@@ -3,13 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Support Project X</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Donate via UPI</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 0;
             display: flex;
@@ -18,56 +16,79 @@
             height: 100vh;
         }
         .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
         }
         h1 {
-            font-size: 32px;
-            color: #333;
+            color: #4CAF50;
         }
-        p {
-            font-size: 18px;
-            color: #555;
+        .donation-amount {
+            margin: 20px 0;
         }
-        .btn {
-            display: inline-block;
+        input[type="number"] {
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .button {
             background-color: #4CAF50;
             color: white;
-            padding: 15px 30px;
-            text-decoration: none;
+            padding: 15px 25px;
             font-size: 18px;
+            border: none;
             border-radius: 5px;
+            cursor: pointer;
             margin-top: 20px;
-            transition: background-color 0.3s;
         }
-        .btn:hover {
+        .button:hover {
             background-color: #45a049;
-        }
-        footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #777;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Support Project X</h1>
-        <p>If you’d like to support the development of Project X, please consider making a donation via UPI.</p>
+<div class="container">
+    <h1>Donate via UPI</h1>
+    <p>Your support can make a difference! Please enter the amount you'd like to donate:</p>
 
-        <!-- UPI Payment Link Button -->
-        <a href="upi://pay?pa=gamobhai2@ybl&pn=Project%20X&mc=0000&tid=1234567890&url=https://luciferofx.github.io/projectxweb/support.html" class="btn" target="_blank">
-            Donate via UPI
-        </a>
-
-        <footer>
-            <p>&copy; 2025 Project X. All rights reserved.</p>
-        </footer>
+    <div class="donation-amount">
+        <input type="number" id="donationAmount" placeholder="Enter amount" min="1" required>
     </div>
+
+    <button class="button" onclick="initiateUPI()">Donate Now</button>
+
+    <p style="margin-top: 20px; color: #777;">You will be redirected to UPI for payment.</p>
+</div>
+
+<script>
+    function initiateUPI() {
+        var amount = document.getElementById('donationAmount').value;
+
+        // If the amount is not a valid number or is less than 1
+        if (isNaN(amount) || amount <= 0) {
+            alert("Please enter a valid donation amount.");
+            return;
+        }
+
+        // Replace with your UPI details
+        var vpa = "gamobhai2@ybl"; // Your UPI ID (e.g., example@upi)
+        var name = "RAJA SHARMA"; // Name to show on the payment
+        var transactionNote = "Donation for cause"; // Note for the transaction
+        var merchantCode = "123456"; // Merchant code (optional)
+        var transactionId = "txn" + Date.now(); // Unique transaction ID
+        var amount = amount; // Amount to be paid
+        var upiUrl = `upi://pay?pa=${vpa}&pn=${name}&mc=${merchantCode}&tid=${transactionId}&url=https://luciferofx.github.io/projectxweb/&am=${amount}&tn=${transactionNote}`;
+
+        // Open the UPI payment interface
+        window.location.href = upiUrl;
+    }
+</script>
 
 </body>
 </html>
