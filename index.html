@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- Add this at the top of your <body> section -->
+<audio id="welcomeMusic" autoplay loop>
+    <source src="path/to/your/welcome-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+
+
     <!-- Preloader -->
     <div id="preloader" class="preloader">
         <div class="loader"></div>
@@ -37,7 +46,21 @@
         <p>Our IP project,   Project X  , is an innovative robotic system developed by a team of seven talented Computer Science students. It combines advanced technologies like Wi-Fi (ESP8266), Bluetooth, facial expressions, and real-time video streaming, making it an exciting and interactive experience.</p>
         <img src="images/robot-image.jpg" alt="Robot" class="hero-image">
     </section>
+<!-- Add this code inside the body section, maybe after your preloader or navigation -->
+<button id="exitButton" class="exit-btn">Exit</button>
 
+<!-- Add a script to control the exit behavior -->
+<script>
+    // Get the button and audio element
+    const exitButton = document.getElementById('exitButton');
+    const welcomeMusic = document.getElementById('welcomeMusic');
+
+    // Add an event listener to stop the music when the exit button is clicked
+    exitButton.addEventListener('click', function() {
+        welcomeMusic.pause(); // Stops the music
+        window.close(); // Close the window (works in certain cases, mostly in browsers with specific permissions)
+    });
+</script>
     <!-- Features Section -->
     <section id="features" class="features">
         <h2>Robot Features</h2>
@@ -179,6 +202,16 @@
 </section>
 
 
+    <!-- Support Section -->
+    <section id="support" class="support">
+        <h2>Support Project X</h2>
+        <p>If you’d like to support the development of Project X, feel free to make a donation via UPI.</p>
+        
+        <!-- Support UPI Button -->
+        <a href="upi://pay?pa=gamobhai2@ybl&pn=Project%20X&mc=0000&tid=1234567890&url=https://luciferofx.github.io/projectxweb/" id="support-btn" class="btn">Support via UPI</a>
+
+        <p><strong>Thank you for your support!</strong></p>
+    </section>
     <!-- Footer -->
     <footer>
         <p>&copy; 2025 Open Source Robot Project. All rights reserved.</p>
