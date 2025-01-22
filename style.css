@@ -1,0 +1,550 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #666;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 900px;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Features Section */
+.features {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2em;
+    color: #333;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: #f9f9f9;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.feature-card img {
+    max-width: 80px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.feature-card p {
+    color: #666;
+}
+
+/* Products Section */
+.products {
+    padding: 50px 20px;
+    background-color: #f4f4f9;
+}
+
+.products h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-item img {
+    max-width: 150px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.product-item h3 {
+    font-size: 1.3em;
+    color: #333;
+}
+
+.product-item p {
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Styling for the highlighted-text class */
+.highlighted-text {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+.highlighted-text strong {
+    color: #1a73e8; /* Add color to the "Project X" text */
+    text-transform: uppercase;
+}
+
+.highlighted-text::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50%;
+    height: 3px;
+    background-color: #1a73e8; /* Add an underline effect */
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.highlighted-text:hover::before {
+    width: 100%; /* Expand underline effect on hover */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .highlighted-text {
+        font-size: 1.2em;
+    }
+}
+/* Contributors Section */
+.contributors {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+}
+
+.contributors h2 {
+    font-size: 2.5em;
+    color: #1a73e8; /* Use a vibrant color for the title */
+    margin-bottom: 15px;
+}
+
+.contributors-description {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #666;
+    font-weight: 500;
+}
+
+.contributors-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contributors-list li {
+    font-size: 1.3em;
+    margin: 15px 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #f4f4f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contributors-list li:hover {
+    background-color: #1a73e8;
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.contributor-icon {
+    font-size: 1.5em;
+    color: #f1c40f; /* Bright color for the icon */
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .contributors-list li {
+        font-size: 1.1em;
+        margin: 10px 15px;
+    }
+}
+/* Project Budget Section */
+.budget {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    color: #333;
+}
+
+.budget h2 {
+    font-size: 2.5em;
+    color: #1a73e8; /* Vibrant color for the title */
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.budget-description {
+    font-size: 1.4em;
+    color: #555;
+    font-weight: 500;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.budget-amount {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #27ae60; /* Green for the budget amount */
+    display: inline-block;
+    position: relative;
+    animation: count-up 3s ease-out forwards;
+}
+
+@keyframes count-up {
+    0% {
+        content: "₹0";
+    }
+    100% {
+        content: "₹7500";
+    }
+}
+
+@media (max-width: 768px) {
+    .budget h2 {
+        font-size: 2.2em;
+    }
+
+    .budget-description {
+        font-size: 1.2em;
+    }
+}
+/* General Animation Settings */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Page Load Animations */
+.hero {
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.features h2, .contributors h2, .budget h2 {
+    animation: fadeIn 2s ease-out;
+}
+
+.feature-card, .contributors-list li, .budget-description {
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.feature-card:nth-child(1), .contributors-list li:nth-child(1), .budget-description {
+    animation-delay: 0.5s;
+}
+
+.feature-card:nth-child(2), .contributors-list li:nth-child(2), .budget-description {
+    animation-delay: 1s;
+}
+
+.feature-card:nth-child(3), .contributors-list li:nth-child(3), .budget-description {
+    animation-delay: 1.5s;
+}
+
+.feature-card:nth-child(4), .contributors-list li:nth-child(4), .budget-description {
+    animation-delay: 2s;
+}
+
+/* Hover Animations for Buttons */
+.navbar a:hover {
+    color: #1a73e8;
+    transition: color 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contributors-list li:hover {
+    background-color: #1a73e8;
+    color: white;
+    transform: translateY(-5px);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Scroll Animations */
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Budget Amount Animation */
+.budget-amount {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #27ae60;
+    display: inline-block;
+    position: relative;
+    animation: count-up 3s ease-out forwards;
+}
+
+@keyframes count-up {
+    0% {
+        content: "₹0";
+    }
+    100% {
+        content: "₹7500";
+    }
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 1.8em;
+    }
+
+    .feature-card, .contributors-list li {
+        font-size: 1.1em;
+    }
+}
+/* Preloader Styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure preloader is on top of everything else */
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light gray */
+    border-top: 8px solid #1a73e8; /* Vibrant blue color for the spinning effect */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Resources Section Styles */
+.resources {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.resources h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #1a73e8;
+}
+
+.resources-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.resource-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.resource-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+}
+
+.resource-card p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #1a73e8;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #155d8a;
+}
+
+.app-btn {
+    background-color: #34b7f1;
+}
+
+.app-btn:hover {
+    background-color: #1e8bb0;
+}
+
+.youtube-btn {
+    background-color: #ff0000;
+}
+
+.youtube-btn:hover {
+    background-color: #e60000;
+}
+
+.github-btn {
+    background-color: #24292f;
+}
+
+.github-btn:hover {
+    background-color: #444c56;
+}
+
+@media (max-width: 768px) {
+    .resources-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resource-card {
+        width: 80%;
+    }
+}
+
