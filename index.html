@@ -166,6 +166,7 @@
     </ul>
 </section>
 
+
 <!-- Budget Section -->
 <section id="budget" class="budget">
     <h2>Project Budget</h2>
@@ -200,6 +201,25 @@
         </div>
     </div>
 </section>
+
+<!-- Contact Section -->
+<div class="contact-form-container">
+    <h2>Give us Suggestion to improve</h2>
+    <form action="https://formspree.io/f/mjkgbnwy" method="POST" id="contactForm">
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="message">Your Message:</label>
+        <textarea name="message" id="message" required></textarea>
+<center>
+        <button type="submit">Send</button></center>
+    </form>
+
+    <!-- Success message will appear after form submission -->
+    <div class="success-message" id="success-message">
+        Thank you for reaching out! We will get back to you shortly.
+    </div>
+</div>
 
 
     <!-- Footer -->
@@ -275,3 +295,24 @@ window.addEventListener('load', function() {
     window.addEventListener('scroll', handleScroll);
     </script>
     
+    <script>
+        // You can add a success message after form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form submission for demo
+
+            // Display the success message
+            document.getElementById('success-message').style.display = 'block';
+            // Optionally, you can reset the form here after successful submission:
+            // e.target.reset();
+        });
+    </script>
+<script>
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('success-message');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        successMessage.style.display = 'block'; // Show success message
+        form.reset(); // Reset form after submission
+    });
+</script>
