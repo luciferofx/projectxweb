@@ -566,3 +566,9 @@ footer p {
 .exit-btn:hover {
     background-color: #FF0000;
 }
+.logo-icon {
+    width: 20px; /* Adjust the size of the logo */
+    height: auto;
+    margin-right: 10px; /* Add space between logo and text */
+    vertical-align: middle; /* Align logo vertically with the text */
+}
