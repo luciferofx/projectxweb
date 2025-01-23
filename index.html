@@ -157,12 +157,12 @@
     <p class="contributors-description">This project was made possible by the efforts of 7 talented Ip  students.<strong></strong> :</p>
     <ul class="contributors-list">
         <li><span class="contributor-icon">&#9733;</span> Raja Sharma</li>
-        <li><span class="contributor-icon">&#9733;</span> Purushan</li>
-        <li><span class="contributor-icon">&#9733;</span> Shiryansh</li>
-        <li><span class="contributor-icon">&#9733;</span> Hamda</li>
-        <li><span class="contributor-icon">&#9733;</span> Varsha</li>
-        <li><span class="contributor-icon">&#9733;</span> Anshul</li>
-        <li><span class="contributor-icon">&#9733;</span> Abhay</li>
+        <li><span class="contributor-icon">&#9733;</span> Purushaan Dubey</li>
+        <li><span class="contributor-icon">&#9733;</span> Shiryansh Aggarwal</li>
+        <li><span class="contributor-icon">&#9733;</span> Mohammad hamdan </li>
+        <li><span class="contributor-icon">&#9733;</span> Varsha Jha</li>
+        <li><span class="contributor-icon">&#9733;</span> Anshul Sharma</li>
+        <li><span class="contributor-icon">&#9733;</span> Anshul Yadav</li>
     </ul>
 </section>
 
@@ -205,12 +205,9 @@
 <!-- Contact Section -->
 <div class="contact-form-container">
     <h2>Give us Suggestion to improve</h2>
-    <form
-    action="https://formspree.io/f/mjkgbnwy"
-    method="POST"
-  >
-          <label for="email">Your Email:</label>
-        <input type="email" name="email"  required>
+    <form action="https://formspree.io/f/mjkgbnwy" method="POST" id="contactForm">
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" id="email" required>
 
         <label for="message">Your Message:</label>
         <textarea name="message" id="message" required></textarea>
@@ -298,7 +295,7 @@ window.addEventListener('load', function() {
     window.addEventListener('scroll', handleScroll);
     </script>
     
-  
+   
 <script>
     const form = document.getElementById('contactForm');
     const successMessage = document.getElementById('success-message');
