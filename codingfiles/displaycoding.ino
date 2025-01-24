@@ -13,7 +13,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 // Team members and project name
 String projectName = "PROJECT X";
 String teamMembers[] = {
-    "Team Member", 
+    "Project by ip student", 
   "Raja", 
   "Purushaan", 
   "Shriyansh", 
@@ -22,7 +22,7 @@ String teamMembers[] = {
   "Anshul", 
   "Abhay"
 };
-int teamSize = 7; // Total team members
+int teamSize = 8; // Total team members
 
 void setup() {
   // Start serial communication for debugging
